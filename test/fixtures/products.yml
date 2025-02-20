@@ -2,14 +2,14 @@
 
 one:
   name: MyString
-  kind: MyString
+  kind: one
   stock: 1
   image: MyString
   price: 9.99
 
 two:
   name: MyString
-  kind: MyString
+  kind: two
   stock: 1
   image: MyString
   price: 9.99

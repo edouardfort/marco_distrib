@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @users_room %>
+
+<div>
+  <%= link_to "Edit this users room", edit_users_room_path(@users_room) %> |
+  <%= link_to "Back to users rooms", users_rooms_path %>
+
+  <%= button_to "Destroy this users room", @users_room, method: :delete %>
+</div>

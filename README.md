@@ -21,4 +21,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* Voila c'est le test de la VM
+* ...

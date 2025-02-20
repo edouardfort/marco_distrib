@@ -15,7 +15,7 @@ class ProductsTest < ApplicationSystemTestCase
     click_on "New product"
 
     fill_in "Image", with: @product.image
-    fill_in "Kind", with: @product.kind
+    fill_in "Kind", with: @product.kind_id
     fill_in "Name", with: @product.name
     fill_in "Price", with: @product.price
     fill_in "Stock", with: @product.stock
@@ -30,7 +30,7 @@ class ProductsTest < ApplicationSystemTestCase
     click_on "Edit this product", match: :first
 
     fill_in "Image", with: @product.image
-    fill_in "Kind", with: @product.kind
+    fill_in "Kind", with: @product.kind_id
     fill_in "Name", with: @product.name
     fill_in "Price", with: @product.price
     fill_in "Stock", with: @product.stock
