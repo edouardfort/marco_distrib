@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_20_144942) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_20_150822) do
   create_table "kinds", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -41,16 +41,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_20_144942) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users_rooms", force: :cascade do |t|
-    t.integer "user_id_id", null: false
-    t.integer "room_number_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["room_number_id"], name: "index_users_rooms_on_room_number_id"
-    t.index ["user_id_id"], name: "index_users_rooms_on_user_id_id"
-  end
-
   add_foreign_key "products", "kinds"
-  add_foreign_key "users_rooms", "room_numbers"
-  add_foreign_key "users_rooms", "user_ids"
 end

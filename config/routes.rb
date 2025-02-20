@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :users_rooms
   resources :rooms
   resources :products
   resources :kinds
