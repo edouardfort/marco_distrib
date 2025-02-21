@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :kind
+  belongs_to :kind, optional: true
   
   validates :name, :kind, :stock, :image, :price, presence: true
 
