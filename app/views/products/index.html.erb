@@ -8,25 +8,27 @@
 <%= link_to "New product", new_product_path, class: "btn btn-secondary" %>
 </div>
 
+<div class="container bg-black">
+  <div id="products" class="container bg-dark p-1">
+    <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-lg-4">
+          <div class="card m-2">
+          <div class="ratio ratio-1x1">
+            <img src= "<%= product.image %>" class="card-img-top object-fit-cover" alt"<%= product.name %>" >
+            </div>
+            <p> Produit : <%= product.name %> </p>
+            <p> Stock : <%= product.stock %> restants</p>
+            <p> Prix : <%= product.price %> € </p>
 
-<div id="products" class="container">
-  <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-lg-4">
-        <div class="card">
-        <div class="ratio ratio-1x1">
-          <img src= "<%= product.image %>" class="card-img-top object-fit-cover" alt"<%= product.name %>" >
+            <p>
+              <%= link_to "Show this product", product %>
+            </p>
           </div>
-          <p> Produit : <%= product.name %> </p>
-          <p> Prix : <%= product.price %> € </p>
-
-          <p>
-            <%= link_to "Show this product", product %>
-          </p>
         </div>
-      </div>
-        <% end %>
-  </div>
+          <% end %>
+    </div>
+    </div>
   </div>
 </div>
 
