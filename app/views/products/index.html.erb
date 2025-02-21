@@ -2,21 +2,14 @@
 
 <% content_for :title, "Products" %>
 
-<h1 class="text-center mt-4">Le Distributeur Solidaire</h1>
-
-
-  <div id="products" class="container">
-    <div class="row">
-      <div class="col-lg-4">
-
-        <div class="d-flex justify-content-center align-items-center gap-2 m-4">
-          <%= link_to "Ajouter un produit", new_product_path, class: "btn btn-success" %>
-          <%= link_to "Voir les commandes", shoppings_path, class: "btn btn-warning" %>
-        </div>
-
-      </div>
-    </div>
+<div id="products" class="container text-center">
+  <h1 class="my-4">Le Distributeur Solidaire</h1>
+  
+  <div class="d-flex justify-content-center align-items-center gap-2 m-4">
+    <%= link_to "Ajouter un produit", new_product_path, class: "btn btn-success" %>
+    <%= link_to "Voir les commandes", shoppings_path, class: "btn btn-warning" %>
   </div>
+</div>
 
 
 
