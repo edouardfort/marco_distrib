@@ -2,15 +2,31 @@
 
 <% content_for :title, "Products" %>
 
-<h1>Products</h1>
+<h1 class="text-center mt-4">Products</h1>
 
-<div id="products">
-  <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
-  <% end %>
+<div class="text-center mt-4">
+<%= link_to "New product", new_product_path, class: "btn btn-secondary" %>
 </div>
 
-<%= link_to "New product", new_product_path %>
+
+<div id="products" class="container">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-lg-4">
+        <div class="card">
+        <div class="ratio ratio-1x1">
+          <img src= "<%= product.image %>" class="card-img-top object-fit-cover" alt"<%= product.name %>" >
+          </div>
+          <p> Produit : <%= product.name %> </p>
+          <p> Prix : <%= product.price %> € </p>
+
+          <p>
+            <%= link_to "Show this product", product %>
+          </p>
+        </div>
+      </div>
+        <% end %>
+  </div>
+  </div>
+</div>
+
