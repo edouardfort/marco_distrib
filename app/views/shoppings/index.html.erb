@@ -8,9 +8,13 @@
   <% @shoppings.each do |shopping| %>
     <%= render shopping %>
     <p>
-      <%= link_to "Show this shopping", shopping %>
+      <%= link_to "Voir la commande", shopping, class: "btn btn-success" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New shopping", new_shopping_path %>
+
+<div class="d-flex justify-content-center align-items-center gap-2 m-4">
+    <%= link_to "Voir les produits", products_path, class: "btn btn-success" %>
+  
+</div>
