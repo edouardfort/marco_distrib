@@ -18,7 +18,10 @@
             <img src= "<%= product.image %>" class="card-img-top object-fit-cover" alt"<%= product.name %>" >
             </div>
             <p> Produit : <%= product.name %> </p>
-            <p> Stock : <%= product.stock %> restants</p>
+            <p><%= if product.stock > 0
+            "Stock : #{product.stock} restants"
+            else
+            "Rupture de stock" end %></p>
             <p> Prix : <%= product.price %> € </p>
 
             <p>
