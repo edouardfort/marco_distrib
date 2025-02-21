@@ -13,6 +13,7 @@ class ShoppingsController < ApplicationController
   # GET /shoppings/new
   def new
     @shopping = Shopping.new
+    @shopping.product_id = params[:product_id]
   end
 
   # GET /shoppings/1/edit

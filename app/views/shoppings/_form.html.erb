@@ -4,11 +4,12 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.association :product, collection: Product.where('stock > 0')%>
+    <%= f.association :product, collection: Product.where('stock > 0'), selected: @shopping.product_id %>
     <%= f.association :room %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
   </div>
+
 
   <div class="form-actions">
   <div class="btn btn-success">
