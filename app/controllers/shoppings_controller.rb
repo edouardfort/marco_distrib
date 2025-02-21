@@ -25,7 +25,7 @@ class ShoppingsController < ApplicationController
 
     respond_to do |format|
       if @shopping.save
-        format.html { redirect_to @shopping, notice: "Shopping was successfully created." }
+        format.html { redirect_to root_path, notice: "Shopping was successfully created." }
         format.json { render :show, status: :created, location: @shopping }
       else
         format.html { render :new, status: :unprocessable_entity }
