@@ -20,16 +20,23 @@
       <% @products.each do |product| %>
         <div class="col-lg-4">
           <div class="card m-2">
-            <%= link_to "/shoppings/new?product_id=#{product.id}", class:"product-link" do %>
-              <div class="ratio ratio-1x1">
-                <%= image_tag(product.image, class: "card-img-top object-fit-cover image",style: "transform=''") %>
+            <% if product.stock > 0 %>
+              <%= link_to "/shoppings/new?product_id=#{product.id}", class: "product-link" do %>
+                <div class="ratio ratio-1x1">
+                  <%= image_tag(product.image, class: "card-img-top object-fit-cover image") %>
+                </div>
+              <% end %>
+            <% else %>
+            <div class="ratio ratio-1x1">
+              <img src="<%= product.image %>" class="card-img-top object-fit-cover">
               </div>
             <% end %>
             <p> Produit : <%= product.name %> </p>
             <p><%= if product.stock > 0
             "Stock : #{product.stock} restants"
             else
-            "Rupture de stock" end %></p>
+            "Rupture de stock" 
+            end %></p>
             <p> Prix : <%= product.price %> € </p>
 
             <p>
@@ -38,7 +45,7 @@
             </p>
           </div>
         </div>
-          <% end %>
+      <% end %>
     </div>
     </div>
   </div>
@@ -46,4 +53,3 @@
 <div class="text-center m-4">
 <%= link_to "Commander", new_shopping_path, class: "btn btn-success fixed-bottom" %>
 </div>
-

@@ -8,9 +8,7 @@ class Shopping < ApplicationRecord
 
   def decrease_product_stock
     if product.stock > 0
-      product.update(stock: product.stock - 1) 
+      product.update(stock: product.stock - 1)
     end
   end
-
-
 end
