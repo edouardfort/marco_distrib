@@ -1,10 +1,20 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="container">
+<div class="text-center m-4">
+
+
 <%= render @shopping %>
 
 <div>
-  <%= link_to "Edit this shopping", edit_shopping_path(@shopping) %> |
-  <%= link_to "Back to shoppings", shoppings_path %>
 
-  <%= button_to "Destroy this shopping", @shopping, method: :delete %>
+    <div class="text-center m-4">
+  <%= link_to "Voir les commandes", shoppings_path, class: "btn btn-warning" %>
+  </div>
+
+  <div class="text-center m-4">
+  <%= link_to "Revenir au distributeur", products_path, class: "btn btn-warning" %>
+  </div>
+
+  </div>
 </div>
