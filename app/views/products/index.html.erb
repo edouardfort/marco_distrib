@@ -2,13 +2,13 @@
 
 <% content_for :title, "Products" %>
 
-<h1 class="text-center mt-4">Products</h1>
+<h1 class="text-center mt-4">Le Distributeur Solidaire</h1>
 
-<div class="text-center mt-4">
-<%= link_to "New product", new_product_path, class: "btn btn-secondary" %>
+<div class="text-center m-4">
+<%= link_to "Ajouter un produit", new_product_path, class: "btn btn-success" %>
 </div>
 
-<div class="container bg-black">
+<div class="container bg-black p-2">
   <div id="products" class="container bg-dark p-1">
     <div class="row">
       <% @products.each do |product| %>
