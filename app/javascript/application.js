@@ -6,11 +6,11 @@ import "bootstrap"
 
 import "controllers"
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("turbo:load", function () {
+  console.log("c'est chargé");
     document.querySelectorAll(".product-link").forEach(function (link) {
       link.addEventListener("click", function (event) {
         event.preventDefault();
-  
         let image = this.querySelector(".image");
         image.style.transition = "transform 1s ease-in-out";
         image.style.transform = "scale(1.1)";
